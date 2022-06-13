@@ -30,7 +30,7 @@
 					}
 				}
 			],
-			"_postman_id": "d3dc2fe7-4da6-49e0-8a19-7a4b44c0d42b",
+			"id": "d3dc2fe7-4da6-49e0-8a19-7a4b44c0d42b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -55,8 +55,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"request\": {\n        \"search\": {\n        \t\"status\":[\"Draft\"],\n        \t\"offset\": 0,\n            \"limit\": 10\n        }\n    }\n}",
-					"options": {}
+					"raw": "{\n    \"request\": {\n        \"search\": {\n        \t\"status\":[\"Draft\"],\n        \t\"offset\": 0,\n            \"limit\": 10\n        }\n    }\n}"
 				},
 				"url": "{{host}}/api/dialcode/v1/list"
 			},
@@ -216,7 +215,7 @@
 					}
 				}
 			],
-			"_postman_id": "2324de78-ac3a-4223-8c4f-35ebfdc8a2b7",
+			"id": "2324de78-ac3a-4223-8c4f-35ebfdc8a2b7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -365,111 +364,6 @@
 					"body": "{\n    \"id\": \"api.dialcode.generate\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-03-17T08:59:43.629Z\",\n    \"params\": {\n        \"resmsgid\": \"965fe3d0-a5d0-11ec-88f3-b3fb6ff88b18\",\n        \"msgid\": \"9646dd90-a5d0-11ec-a6f2-dddf22685ab9\",\n        \"status\": \"successful\",\n        \"err\": null,\n        \"errmsg\": null\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"dialcodes\": [\n            \"E2Z2B8\"\n        ],\n        \"count\": 1,\n        \"batchcode\": null,\n        \"publisher\": null\n    }\n}"
 				},
 				{
-					"id": "51dc3fb1-3222-4b88-84dd-f603d7a717fe",
-					"name": "400 - Required fields missing: count",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-Channel-ID",
-								"value": "{{x_channel_id}}"
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{auth}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"request\": {\n    \"dialcodes\": {\n      \"count\": 0\n    }\n  }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}/api/dialcode/v1/generate"
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Wed, 06 Apr 2022 17:47:49 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "305"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "X-RateLimit-Limit-hour",
-							"value": "30000"
-						},
-						{
-							"key": "X-RateLimit-Remaining-hour",
-							"value": "29999"
-						},
-						{
-							"key": "x-powered-by",
-							"value": "Express"
-						},
-						{
-							"key": "vary",
-							"value": "X-HTTP-Method-Override, Accept-Encoding"
-						},
-						{
-							"key": "access-control-allow-origin",
-							"value": "*"
-						},
-						{
-							"key": "access-control-allow-methods",
-							"value": "GET,PUT,POST,PATCH,DELETE,OPTIONS"
-						},
-						{
-							"key": "access-control-allow-headers",
-							"value": "Content-Type, Authorization,cid, user-id, x-auth, Cache-Control, X-Requested-With, *"
-						},
-						{
-							"key": "etag",
-							"value": "W/\"131-LF5IC/kuw4BhC7Vup+Uz+ZHGKJk\""
-						},
-						{
-							"key": "x-envoy-upstream-service-time",
-							"value": "2"
-						},
-						{
-							"key": "X-Kong-Upstream-Latency",
-							"value": "7"
-						},
-						{
-							"key": "X-Kong-Proxy-Latency",
-							"value": "14"
-						},
-						{
-							"key": "Via",
-							"value": "kong/0.14.1"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n    \"id\": \"api.dialcode.generate\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-04-06T17:47:49.082Z\",\n    \"params\": {\n        \"resmsgid\": \"aca353a0-b5d1-11ec-a8b6-8b6d917b3a2a\",\n        \"msgid\": null,\n        \"status\": \"failed\",\n        \"err\": \"ERR_DIALCODE_GENERATE_COUNT_ERROR\",\n        \"errmsg\": \"Required fields count is missing or invalid\"\n    },\n    \"responseCode\": \"CLIENT_ERROR\",\n    \"result\": {}\n}"
-				},
-				{
 					"id": "8894b4e7-8f6c-4d28-91c5-d4c88edb151f",
 					"name": "400 - Channel Id missing",
 					"originalRequest": {
@@ -574,6 +468,111 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "{\n    \"id\": \"api.dialcode.generate\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-04-04T09:28:43.640Z\",\n    \"params\": {\n        \"resmsgid\": \"9eefff80-b3f9-11ec-a8b6-8b6d917b3a2a\",\n        \"msgid\": null,\n        \"status\": \"failed\",\n        \"err\": \"ERR_REQUEST_FIELDS_CHANNEL_ID_MISSING\",\n        \"errmsg\": \"Required field channel id is missing\"\n    },\n    \"responseCode\": \"CLIENT_ERROR\",\n    \"result\": {}\n}"
+				},
+				{
+					"id": "51dc3fb1-3222-4b88-84dd-f603d7a717fe",
+					"name": "400 - Required fields missing: count",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Channel-ID",
+								"value": "{{x_channel_id}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"request\": {\n    \"dialcodes\": {\n      \"count\": 0\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/dialcode/v1/generate"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 17:47:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-RateLimit-Limit-hour",
+							"value": "30000"
+						},
+						{
+							"key": "X-RateLimit-Remaining-hour",
+							"value": "29999"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET,PUT,POST,PATCH,DELETE,OPTIONS"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type, Authorization,cid, user-id, x-auth, Cache-Control, X-Requested-With, *"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"131-LF5IC/kuw4BhC7Vup+Uz+ZHGKJk\""
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "2"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "7"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "14"
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.14.1"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": \"api.dialcode.generate\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-04-06T17:47:49.082Z\",\n    \"params\": {\n        \"resmsgid\": \"aca353a0-b5d1-11ec-a8b6-8b6d917b3a2a\",\n        \"msgid\": null,\n        \"status\": \"failed\",\n        \"err\": \"ERR_DIALCODE_GENERATE_COUNT_ERROR\",\n        \"errmsg\": \"Required fields count is missing or invalid\"\n    },\n    \"responseCode\": \"CLIENT_ERROR\",\n    \"result\": {}\n}"
 				}
 			]
 		},
@@ -599,7 +598,7 @@
 					}
 				}
 			],
-			"_postman_id": "14d47f1b-674d-4ce1-a73a-2a1e28922e78",
+			"id": "14d47f1b-674d-4ce1-a73a-2a1e28922e78",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1106,7 +1105,7 @@
 					}
 				}
 			],
-			"_postman_id": "eec48876-33a0-41f6-a4d6-b8bf65f1bc08",
+			"id": "eec48876-33a0-41f6-a4d6-b8bf65f1bc08",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1131,7 +1130,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"request\": {\n        \"search\": {\n        \t\"identifier\": \"H8V7W8\",\n            \"status\": [\"Draft\"]\n        },\n        \"fields\": [\"dialcode_index\",\"identifier\",\"channel\",\"batchcode\"],\n        \"limit\": 5,\n        \"sort\": {\"dialcode_index\": \"Desc\"}\n    }\n}",
+					"raw": "{\n    \"request\": {\n        \"search\": {\n        \t\"identifier\": \"H8V7W8\",\n            \"status\": \"Draft\"\n        },\n        \"fields\": [\"dialcode_index\",\"identifier\",\"channel\",\"batchcode\"],\n        \"limit\": 5,\n        \"sort\": {\"dialcode_index\": \"Desc\"}\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1141,120 +1140,6 @@
 				"url": "{{host}}/api/dialcode/v1/search"
 			},
 			"response": [
-				{
-					"id": "13613f00-f306-4334-883a-21765797b941",
-					"name": "200 - Success No data",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-Channel-Id",
-								"value": "{{x_channel_id}}",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{auth}}",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"request\": {\n        \"search\": {\n        \t\"identifier\": \"J9K8D5\",\n            \"status\": \"Live\"\n        },\n        \"fields\": [\"dialcode_index\",\"identifier\",\"channel\",\"batchcode\"],\n        \"limit\": 5,\n        \"sort\": {\"dialcode_index\": \"Desc\"}\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}/api/dialcode/v1/search"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Thu, 07 Apr 2022 06:11:38 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "X-RateLimit-Limit-hour",
-							"value": "30000"
-						},
-						{
-							"key": "X-RateLimit-Remaining-hour",
-							"value": "29995"
-						},
-						{
-							"key": "x-powered-by",
-							"value": "Express"
-						},
-						{
-							"key": "vary",
-							"value": "X-HTTP-Method-Override, Accept-Encoding"
-						},
-						{
-							"key": "access-control-allow-origin",
-							"value": "*"
-						},
-						{
-							"key": "access-control-allow-methods",
-							"value": "GET,PUT,POST,PATCH,DELETE,OPTIONS"
-						},
-						{
-							"key": "access-control-allow-headers",
-							"value": "Content-Type, Authorization,cid, user-id, x-auth, Cache-Control, X-Requested-With, *"
-						},
-						{
-							"key": "etag",
-							"value": "W/\"11b-0xAgVcRwt8WgNu3355o2H12MQ/c\""
-						},
-						{
-							"key": "x-envoy-upstream-service-time",
-							"value": "23"
-						},
-						{
-							"key": "X-Kong-Upstream-Latency",
-							"value": "26"
-						},
-						{
-							"key": "X-Kong-Proxy-Latency",
-							"value": "18"
-						},
-						{
-							"key": "Via",
-							"value": "kong/0.14.1"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "gzip"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n    \"id\": \"api.dialcode.search\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-04-07T06:11:38.070Z\",\n    \"params\": {\n        \"resmsgid\": \"95967760-b639-11ec-a8b6-8b6d917b3a2a\",\n        \"msgid\": \"95936a20-b639-11ec-9b27-9d4d54fedc3d\",\n        \"status\": \"successful\",\n        \"err\": null,\n        \"errmsg\": null\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"dialcodes\": [],\n        \"count\": 0\n    }\n}"
-				},
 				{
 					"id": "dbb3f1fc-b12e-43ad-8feb-cc7a0c33a4ac",
 					"name": "200 - Success",
@@ -1368,6 +1253,120 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "{\n    \"id\": \"api.dialcode.search\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-04-07T06:10:34.872Z\",\n    \"params\": {\n        \"resmsgid\": \"6feb3780-b639-11ec-a8b6-8b6d917b3a2a\",\n        \"msgid\": \"6fe8c680-b639-11ec-9b27-9d4d54fedc3d\",\n        \"status\": \"successful\",\n        \"err\": null,\n        \"errmsg\": null\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"dialcodes\": [\n            {\n                \"dialcode_index\": 10595824,\n                \"identifier\": \"J9K8D5\",\n                \"channel\": \"0125805318613565447\",\n                \"generated_on\": \"2022-04-07T06:08:17.878+0000\",\n                \"objectType\": \"DialCode\",\n                \"status\": \"Draft\"\n            }\n        ],\n        \"count\": 1\n    }\n}"
+				},
+				{
+					"id": "13613f00-f306-4334-883a-21765797b941",
+					"name": "200 - Success No data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Channel-Id",
+								"value": "{{x_channel_id}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request\": {\n        \"search\": {\n        \t\"identifier\": \"J9K8D5\",\n            \"status\": \"Live\"\n        },\n        \"fields\": [\"dialcode_index\",\"identifier\",\"channel\",\"batchcode\"],\n        \"limit\": 5,\n        \"sort\": {\"dialcode_index\": \"Desc\"}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/dialcode/v1/search"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Apr 2022 06:11:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit-hour",
+							"value": "30000"
+						},
+						{
+							"key": "X-RateLimit-Remaining-hour",
+							"value": "29995"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET,PUT,POST,PATCH,DELETE,OPTIONS"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type, Authorization,cid, user-id, x-auth, Cache-Control, X-Requested-With, *"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"11b-0xAgVcRwt8WgNu3355o2H12MQ/c\""
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "23"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "26"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "18"
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.14.1"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": \"api.dialcode.search\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2022-04-07T06:11:38.070Z\",\n    \"params\": {\n        \"resmsgid\": \"95967760-b639-11ec-a8b6-8b6d917b3a2a\",\n        \"msgid\": \"95936a20-b639-11ec-9b27-9d4d54fedc3d\",\n        \"status\": \"successful\",\n        \"err\": null,\n        \"errmsg\": null\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"dialcodes\": [],\n        \"count\": 0\n    }\n}"
 				}
 			]
 		}
